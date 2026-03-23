@@ -1,7 +1,4 @@
 
-  # Responsive Portfolio Website
-
-  This is a code bundle for Responsive Portfolio Website. The original project is available at https://www.figma.com/design/vx7QbEcdnwmnBweaH1hpkr/Responsive-Portfolio-Website.
 
   ## Running the code
 
