@@ -1,0 +1,19 @@
+/* ========================================
+   IMPORT FONT TỪ GOOGLE FONTS
+   ======================================== */
+
+/* Để thêm font mới:
+   1. Truy cập https://fonts.google.com/
+   2. Chọn font bạn thích
+   3. Copy dòng @import và dán vào đây
+   4. Cập nhật fontFamily trong /src/app/config/siteConfig.ts
+*/
+
+/* VÍ DỤ: Uncomment (bỏ dấu gạch chéo) dòng bên dưới để sử dụng font Roboto */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'); */
+
+/* VÍ DỤ: Font Poppins - Trẻ trung, năng động */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
+
+/* VÍ DỤ: Font Montserrat - Đậm, nổi bật */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */

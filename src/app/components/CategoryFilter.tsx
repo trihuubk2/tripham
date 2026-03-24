@@ -1,20 +1,41 @@
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { useRef, useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "motion/react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { siteConfig } from "../config/siteConfig";
 
 interface CategoryFilterProps {
   categories: string[];
-  selectedCategory: string;
+  activeCategory: string;
   onCategoryChange: (category: string) => void;
 }
 
-export function CategoryFilter({ categories, selectedCategory, onCategoryChange }: CategoryFilterProps) {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(false);
+export function CategoryFilter({ categories, activeCategory, onCategoryChange }: CategoryFilterProps) {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const checkScroll = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Hiện khi cuộn lên, ẩn khi cuộn xuống
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+  // Kiểm tra và cập nhật trạng thái mũi tên
+  const updateArrows = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
       setShowLeftArrow(scrollLeft > 0);
@@ -23,98 +44,89 @@ export function CategoryFilter({ categories, selectedCategory, onCategoryChange 
   };
 
   useEffect(() => {
-    checkScroll();
-    window.addEventListener('resize', checkScroll);
-    return () => window.removeEventListener('resize', checkScroll);
-  }, []);
+    updateArrows();
+    window.addEventListener("resize", updateArrows);
+    return () => window.removeEventListener("resize", updateArrows);
+  }, [categories]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Luôn hiện khi ở đầu trang
-      if (currentScrollY < 100) {
-        setIsVisible(true);
-      } 
-      // Ẩn khi cuộn xuống (chỉ khi thực sự cuộn xuống được)
-      else if (currentScrollY > lastScrollY && currentScrollY - lastScrollY > 5) {
-        setIsVisible(false);
-      } 
-      // Hiện khi cuộn lên (kể cả cuộn lên một chút)
-      else if (currentScrollY < lastScrollY) {
-        setIsVisible(true);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
-
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 200;
-      scrollContainerRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
+      const scrollAmount = 300;
+      const newScrollLeft = direction === "left"
+        ? scrollContainerRef.current.scrollLeft - scrollAmount
+        : scrollContainerRef.current.scrollLeft + scrollAmount;
+      
+      scrollContainerRef.current.scrollTo({
+        left: newScrollLeft,
+        behavior: "smooth",
       });
     }
   };
 
   return (
-    <div 
-      className={`sticky top-16 bg-gray-900/95 backdrop-blur-md z-40 border-b border-gray-800 transition-transform duration-300 ${
-        isVisible ? 'translate-y-0' : '-translate-y-full'
-      }`}
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="relative flex items-center">
-          {/* Left Arrow */}
-          {showLeftArrow && (
-            <button
-              onClick={() => scroll('left')}
-              className="absolute left-0 z-10 bg-gray-900 p-2 rounded-full shadow-lg hover:bg-gray-800 transition-colors md:hidden"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft size={20} className="text-white" />
-            </button>
-          )}
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -100, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed top-16 left-0 right-0 z-40 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800"
+        >
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center gap-2 justify-center">
+              {/* Nút mũi tên trái */}
+              {showLeftArrow && (
+                <button
+                  onClick={() => scroll("left")}
+                  className="shrink-0 p-2 rounded-full bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition-colors"
+                  aria-label="Cuộn trái"
+                >
+                  <ChevronLeft className="size-5" />
+                </button>
+              )}
 
-          {/* Categories */}
-          <div
-            ref={scrollContainerRef}
-            onScroll={checkScroll}
-            className="flex gap-2 sm:gap-3 overflow-x-auto scrollbar-hide scroll-smooth"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-          >
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => onCategoryChange(category)}
-                className={`px-4 sm:px-6 py-2 rounded-full whitespace-nowrap transition-all ${
-                  selectedCategory === category
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
-                }`}
+              {/* Container các nút category */}
+              <div
+                ref={scrollContainerRef}
+                onScroll={updateArrows}
+                className="flex gap-2 overflow-x-auto scrollbar-hide scroll-smooth"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
               >
-                {category}
-              </button>
-            ))}
-          </div>
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => onCategoryChange(category)}
+                    className={`shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                      activeCategory === category
+                        ? "text-white"
+                        : "bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+                    }`}
+                    style={
+                      activeCategory === category
+                        ? { backgroundColor: siteConfig.primaryColor }
+                        : {}
+                    }
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
 
-          {/* Right Arrow */}
-          {showRightArrow && (
-            <button
-              onClick={() => scroll('right')}
-              className="absolute right-0 z-10 bg-gray-900 p-2 rounded-full shadow-lg hover:bg-gray-800 transition-colors md:hidden"
-              aria-label="Scroll right"
-            >
-              <ChevronRight size={20} className="text-white" />
-            </button>
-          )}
-        </div>
-      </div>
-    </div>
+              {/* Nút mũi tên phải */}
+              {showRightArrow && (
+                <button
+                  onClick={() => scroll("right")}
+                  className="shrink-0 p-2 rounded-full bg-zinc-800 text-zinc-300 hover:bg-zinc-700 transition-colors"
+                  aria-label="Cuộn phải"
+                >
+                  <ChevronRight className="size-5" />
+                </button>
+              )}
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
