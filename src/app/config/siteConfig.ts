@@ -106,7 +106,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
 
     // Thông tin liên hệ
     contact: {
-      email: "trihu118@gmail.com",
+      email: "trihuu118@gmail.com",
       phone: "+84 945 01 01 18",
       location: "Thành phố Hồ Chí Minh, Việt Nam",
     },
