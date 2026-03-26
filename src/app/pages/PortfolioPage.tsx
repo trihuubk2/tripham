@@ -35,7 +35,7 @@ export function PortfolioPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Portfolio
           </h1>
-          <p className="text-zinc-400 text-lg">
+          <p className="text-zinc-400 text-lg whitespace-pre-line">
             {siteConfig.subtitle}
           </p>
         </div>

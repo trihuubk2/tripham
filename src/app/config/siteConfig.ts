@@ -5,7 +5,9 @@
 export const siteConfig = {
   // THÔNG TIN CƠ BẢN
   title: "Tri.P Media",
-  subtitle: "Recap/Wedding Video - Live Stream - VFX",
+  subtitle: `Recap/Wedding Video\nLive Streaming - VFX`,
+  
+  
   footer: "© 2026 Trí Phạm",
 
   // MÀU SẮC CHỦ ĐẠO
@@ -19,9 +21,9 @@ export const siteConfig = {
   // HEADER (Phần trên cùng)
   header: {
     // Căn chỉnh khoảng cách lên xuống (padding)
-    paddingTop: 200,    // Khoảng cách phía trên (px) - Desktop
+    paddingTop: 100,    // Khoảng cách phía trên (px) - Desktop
     paddingBottom: 48, // Khoảng cách phía dưới (px) - Desktop
-    paddingTopMobile: 108,    // Khoảng cách phía trên (px) - Mobile
+    paddingTopMobile: 39,    // Khoảng cách phía trên (px) - Mobile
     paddingBottomMobile: 48, // Khoảng cách phía dưới (px) - Mobile
     
     // Background Type: "solid" (màu), "image" (hình), "video" (video)
@@ -48,13 +50,16 @@ export const siteConfig = {
   // TRANG CHỦ - NỘI DUNG
   home: {
     heroTitle: "Xin Chào, Tôi Là Trí Phạm",
-    heroSubtitle: "Video Editor & Content Creator chuyên nghiệp với hơn 3 năm kinh nghiệm",
+    heroTitleSize: "text-2x2",
+    heroSubtitle: "Video Editor - Kỹ Thuật Livestream chuyên nghiệp với hơn 5 năm kinh nghiệm",
+
+    
     
     aboutTitle: "Về Tôi",
     aboutContent: `Tôi là một Video Editor đam mê với nghệ thuật kể chuyện qua hình ảnh.
 
 Với kinh nghiệm làm việc trong nhiều dự án từ sự kiện, wedding đến quảng cáo, 
-tôi luôn mang đến những sản phẩm chất lượng cao và sáng tạo.
+tôi luôn mang đến những sản phẩm chất lượng cao, phù hợp với nhu cầu khách hàng.
 
 Mục tiêu của tôi là biến những khoảnh khắc của bạn thành những câu chuyện đáng nhớ.`,
 
@@ -71,15 +76,16 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
         description: "Chỉnh màu chuyên nghiệp, tạo tone màu độc đáo cho từng dự án",
       },
       {
-        icon: "code",
-        title: "Motion Graphics",
-        description: "Tạo hiệu ứng chuyển động, text animation, lower thirds",
-      },
-      {
         icon: "award",
         title: "Live Streaming",
         description: "Hỗ trợ live stream sự kiện, hội thảo với chất lượng cao",
       },
+      {
+        icon: "code",
+        title: "Motion Graphics",
+        description: "Tạo hiệu ứng chuyển động, text animation, lower thirds",
+      },
+    
     ],
 
     // Kinh nghiệm làm việc
@@ -87,21 +93,21 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       {
         title: "Video Editor",
         company: "Freelancer",
-        period: "2022 - Hiện tại",
+        period: "2019 - Hiện tại",
         description: "Thực hiện dựng video cho các dự án wedding, sự kiện, quảng cáo. Hợp tác với nhiều đơn vị tổ chức sự kiện và studio ảnh cưới.",
       },
       {
-        title: "Content Creator",
-        company: "Các dự án cá nhân",
-        period: "2021 - Hiện tại",
-        description: "Sáng tạo nội dung video cho mạng xã hội, YouTube. Xây dựng phong cách riêng và thu hút người xem.",
+        title: "Live Streaming",
+        company: "Freelance",
+        period: "2019 - Hiện tại",
+        description: "Livestream sự kiện, các hội thảo, cầu truyền hình, tương tác giữa các cầu truyền hình, live led",
       },
     ],
 
     // Thông tin liên hệ
     contact: {
-      email: "contact@example.com",
-      phone: "+84 123 456 789",
+      email: "trihu118@gmail.com",
+      phone: "+84 945 01 01 18",
       location: "Thành phố Hồ Chí Minh, Việt Nam",
     },
   },
@@ -116,15 +122,63 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       thumbnail: "", // Để trống = dùng thumbnail từ YouTube, hoặc thêm đường dẫn hình: "/thumbnails/video1.jpg"
     },
     {
+      id: "NweplTCcjmU",
+      title: "Ngày hội thả diều BV Mắt Sài Gòn CT",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+    {
+      id: "hx3hBbNpZEM",
+      title: "YEP - BV Mắt Sài Gòn CT - 2024",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+    {
       id: "ASoWeoyL9FY",
       title: "YEP - Syngenta - VFC 2025",
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Sự Kiện",
       thumbnail: "",
     },
-    {
-      id: "FrVVtKW4wjo",
+    {  id: "aRKrUKj0OTw",
+      title: "Recap Bình Minh Việt",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+    {  id: "x5ktx3J1sPY",
+      title: "Recap YEP OHUI - Sheraton CT",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+    {  id: "gyzv34l1jvo",
+      title: "Recap Tứ Thiên Kim - DJI",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+    {  id: "ft1yMrQBkbo",
+      title: "Recap DQ Group - Vạn Phát Cần Thơ",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "",
+    },
+
+    
+    
+    //WEDDING
+    { id: "FrVVtKW4wjo",
       title: "Long + Giang | Cần Thơ",
+      description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Wedding",
+      thumbnail: "",
+    },
+    {
+      id: "JMSbXnaRBNM",
+      title: "Wedding | Phước Thành và Dạ Phương",
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Wedding",
       thumbnail: "",

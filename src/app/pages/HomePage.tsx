@@ -63,10 +63,10 @@ export function HomePage() {
         {/* Content */}
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-1xl md:text-3xl font-bold text-white mb-5">
               {siteConfig.home.heroTitle}
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-1xl md:text-1xl text-white/90 mb-8 leading-relaxed">
               {siteConfig.home.heroSubtitle}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
@@ -103,12 +103,12 @@ export function HomePage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 
-              className="text-3xl md:text-4xl font-bold mb-6 text-center"
+              className="text-3xl md:text-3xl font-bold mb-6 text-center"
               style={{ color: siteConfig.primaryColor }}
             >
               {siteConfig.home.aboutTitle}
             </h2>
-            <p className="text-zinc-300 text-lg leading-relaxed text-center whitespace-pre-line mb-12">
+            <p className="text-zinc-300 text-md leading-relaxed text-center whitespace-pre-line mb-12">
               {siteConfig.home.aboutContent}
             </p>
           </div>
