@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { siteConfig } from "../config/siteConfig";
 import { Video, Code, Camera, Briefcase, Award, Mail, Phone, MapPin } from "lucide-react";
 import { Navigation } from "../components/Navigation";
+import { BackToTop } from "../components/BackToTop";
 
 export function HomePage() {
   return (
@@ -254,6 +255,9 @@ export function HomePage() {
           <p>{siteConfig.footer}</p>
         </div>
       </footer>
+
+      {/* Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }

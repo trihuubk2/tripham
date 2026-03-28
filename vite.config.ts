@@ -19,4 +19,14 @@ export default defineConfig({
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  // Configure dev server for SPA routing (fix 404 on refresh)
+  server: {
+    historyApiFallback: true,
+  },
+
+  // Configure preview server for SPA routing
+  preview: {
+    historyApiFallback: true,
+  },
 })
