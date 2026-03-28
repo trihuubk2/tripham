@@ -216,7 +216,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       title: "Wedding Thịnh và Châu",
       description: "Kan Wedding - Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Wedding",
-      thumbnail: "",
+      thumbnail: "https://sf-static.upanhlaylink.com/img/image_20260328986503bb4625a901e0fc73db775e159c.jpg",
     },
   ],
 
