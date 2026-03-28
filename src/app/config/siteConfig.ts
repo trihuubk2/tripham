@@ -209,7 +209,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       title: "Vu Quy | Phương Linh và Thanh Huy",
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Wedding",
-      thumbnail: "",
+      thumbnail: "https://sf-static.upanhlaylink.com/img/image_20260328c4895608ca0286546d61aa110ca512f2.jpg",
     },
     {
       id: "-J_J7uKen50",
