@@ -65,7 +65,7 @@ export const siteConfig = {
     descriptionSize: "sm", // xs, sm, base
     
     // Khoảng cách padding bên trong overlay
-    padding: "4", // 2, 3, 4, 5, 6 (số càng lớn = padding càng nhiều)
+    padding: "1.9", // 2, 3, 4, 5, 6 (số càng lớn = padding càng nhiều)
   },
 
   // TRANG CHỦ - NỘI DUNG
@@ -209,14 +209,14 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       title: "Vu Quy | Phương Linh và Thanh Huy",
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Wedding",
-      thumbnail: "https://sf-static.upanhlaylink.com/img/image_20260328c4895608ca0286546d61aa110ca512f2.jpg",
+      thumbnail: "",
     },
     {
       id: "-J_J7uKen50",
       title: "Wedding Thịnh và Châu",
       description: "Kan Wedding - Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Wedding",
-      thumbnail: "https://sf-static.upanhlaylink.com/img/image_20260328986503bb4625a901e0fc73db775e159c.jpg",
+      thumbnail: "",
     },
   ],
 

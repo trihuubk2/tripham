@@ -39,8 +39,8 @@ export function VideoCard({ videoId, title, description, thumbnail, index = 0 }:
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ 
-        duration: 0.5, 
-        delay: index * 0.1, // Stagger effect
+        duration: 0.0, 
+        delay: index * 0.005, // Stagger effect
         ease: "easeOut" 
       }}
       className="group relative overflow-hidden rounded-lg bg-zinc-900 transition-transform hover:scale-105"
@@ -64,10 +64,10 @@ export function VideoCard({ videoId, title, description, thumbnail, index = 0 }:
             {/* Overlay tối + Play button tròn */}
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center transition-opacity group-hover:bg-black/40">
               <div 
-                className="rounded-full p-5 shadow-lg transition-transform group-hover:scale-110"
+                className="rounded-full p-2 shadow-lg transition-transform group-hover:scale-110"
                 style={{ backgroundColor: siteConfig.primaryColor }}
               >
-                <Play className="h-10 w-10 text-white fill-white" />
+                <Play className="h-5 w-10 text-white fill-white" />
               </div>
             </div>
             
