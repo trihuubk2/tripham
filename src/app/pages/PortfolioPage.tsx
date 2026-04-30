@@ -8,7 +8,7 @@ import { siteConfig } from "../config/siteConfig";
 export function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("Tất cả");
 
-  // Lấy danh sách categories duy nhất
+  // Lấy danh sách categories duy nhất từ videos
   const categories = useMemo(() => {
     const uniqueCategories = Array.from(
       new Set(siteConfig.videos.map((v) => v.category))

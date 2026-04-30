@@ -73,14 +73,27 @@ export function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 to="/portfolio"
-                className="px-8 py-3 rounded-lg font-semibold text-white transition-all hover:opacity-90 hover:scale-105"
-                style={{ backgroundColor: siteConfig.primaryColor }}
+                className="px-8 py-3 rounded-lg font-semibold transition-all hover:opacity-90 hover:scale-105"
+                style={{ 
+                  backgroundColor: siteConfig.homeButtons.portfolioButton.background,
+                  color: siteConfig.homeButtons.portfolioButton.text,
+                }}
               >
                 Xem Portfolio
               </Link>
               <a
                 href={`#contact`}
-                className="px-8 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold transition-all hover:bg-white/20"
+                className="px-8 py-3 backdrop-blur-sm rounded-lg font-semibold transition-all"
+                style={{
+                  backgroundColor: siteConfig.homeButtons.contactButton.background,
+                  color: siteConfig.homeButtons.contactButton.text,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = siteConfig.homeButtons.contactButton.hoverBackground;
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = siteConfig.homeButtons.contactButton.background;
+                }}
               >
                 Liên Hệ
               </a>

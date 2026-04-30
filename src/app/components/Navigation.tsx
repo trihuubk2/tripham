@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { Home, Video, Menu, X } from "lucide-react";
+import { Home, Video, Radio, Menu, X } from "lucide-react";
 import { siteConfig } from "../config/siteConfig";
 import { useState } from "react";
 
@@ -61,6 +61,22 @@ export function Navigation() {
               <Video className="size-5" />
               <span>Portfolio</span>
             </Link>
+            <Link
+              to="/livestream"
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
+                isActive("/livestream")
+                  ? "text-white"
+                  : "text-zinc-400 hover:text-white hover:bg-zinc-800"
+              }`}
+              style={
+                isActive("/livestream")
+                  ? { backgroundColor: siteConfig.primaryColor }
+                  : {}
+              }
+            >
+              <Radio className="size-5" />
+              <span>Livestream</span>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,7 +111,7 @@ export function Navigation() {
             <Link
               to="/portfolio"
               onClick={() => setIsMenuOpen(false)}
-              className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all ${
+              className={`flex items-center gap-2 px-4 py-3 rounded-lg mb-2 transition-all ${
                 isActive("/portfolio")
                   ? "text-white"
                   : "text-zinc-400 hover:text-white hover:bg-zinc-800"
@@ -108,6 +124,23 @@ export function Navigation() {
             >
               <Video className="size-5" />
               <span>Portfolio</span>
+            </Link>
+            <Link
+              to="/livestream"
+              onClick={() => setIsMenuOpen(false)}
+              className={`flex items-center gap-2 px-4 py-3 rounded-lg transition-all ${
+                isActive("/livestream")
+                  ? "text-white"
+                  : "text-zinc-400 hover:text-white hover:bg-zinc-800"
+              }`}
+              style={
+                isActive("/livestream")
+                  ? { backgroundColor: siteConfig.primaryColor }
+                  : {}
+              }
+            >
+              <Radio className="size-5" />
+              <span>Livestream</span>
             </Link>
           </div>
         )}
