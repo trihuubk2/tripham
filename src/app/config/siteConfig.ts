@@ -133,7 +133,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       },
       {
         title: "Live Streaming",
-        company: "Freelance",
+        company: "Freelancer",
         period: "2019 - Hiện tại",
         description: "Livestream sự kiện, các hội thảo, cầu truyền hình, tương tác giữa các cầu truyền hình, live Led",
       },
@@ -169,6 +169,13 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
       category: "Short video",
       thumbnail: "https://i.postimg.cc/RZ3gxcrZ/Screenshot-2026-04-30-163448.png",
+    },
+    {
+      id: "OpVDhkJIUh8",
+      title: "Recap | Tịch Văn show",
+      description: "Minh Vũ (CamOp) - Tri.P (Editor)",
+      category: "Sự Kiện",
+      thumbnail: "", // Để trống = dùng thumbnail từ YouTube, hoặc thêm đường dẫn hình: "/thumbnails/video1.jpg"
     },
     {
       id: "IUvoeJhQa3g",
