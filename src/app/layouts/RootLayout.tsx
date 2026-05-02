@@ -1,4 +1,5 @@
 import { Outlet } from "react-router";
+import { Analytics } from "@vercel/analytics/react";
 import { FontLoader } from "../components/FontLoader";
 import { Navigation } from "../components/Navigation";
 import { siteConfig } from "../config/siteConfig";
@@ -30,6 +31,7 @@ export function RootLayout() {
           <Outlet />
         </div>
       </div>
+      <Analytics />
     </>
   );
 }
