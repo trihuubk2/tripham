@@ -156,6 +156,19 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       category: "Short video",
       thumbnail: "https://i.postimg.cc/020S4jXH/Screenshot-2026-04-30-162600.png",
     },
+     {  id: "ATAlEwnWCXY",
+      title: "Phim giới thiệu - Sheration Cần Thơ",
+      description: "Lý Luân (PM) - Tri.P (Editor)",
+      category: "Short video",
+      thumbnail: "",
+    },
+     },
+     {  id: "hECEmPc4VU0",
+      title: "PNJ Cao Lãnh",
+      description: "Minh Vũ (CamOP) - Tri.P (Editor)",
+      category: "Short video",
+      thumbnail: "",
+    },
     {
       id: "7wHtZsRjCVc",
       title: "Giới thiệu DatXE App_Kịch bản 2",
@@ -170,6 +183,20 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       category: "Short video",
       thumbnail: "https://i.postimg.cc/RZ3gxcrZ/Screenshot-2026-04-30-163448.png",
     },
+       {
+      id: "spaYLyfJSQg",
+      title: "Giới thiệu Sarvan - Sheration Cần Thơ",
+      description: "Minh Vũ (CamOp) - Tri.P (Editor)",
+      category: "Short video",
+      thumbnail: "",
+    },
+    {
+      id: "lvbwgQcSJ00",
+      title: "Giới thiệu Sheration Cần Thơ - Hội trường",
+      description: "Lý Luân (PM) - Tri.P (Editor)",
+      category: "Short video",
+      thumbnail: "",
+    },
     {
       id: "OpVDhkJIUh8",
       title: "Recap | Tịch Văn show",
@@ -177,6 +204,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       category: "Sự Kiện",
       thumbnail: "", // Để trống = dùng thumbnail từ YouTube, hoặc thêm đường dẫn hình: "/thumbnails/video1.jpg"
     },
+    
     {
       id: "IUvoeJhQa3g",
       title: "Recap | Tân Niên CB Group",
@@ -243,6 +271,13 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
       id: "JMSbXnaRBNM",
       title: "Wedding | Phước Thành và Dạ Phương",
       description: "Ekip Thạnh Nguyễn (CamOp) - Tri.P (Editor)",
+      category: "Wedding",
+      thumbnail: "",
+    },
+     {
+      id: "OUb3cwSLjcE",
+      title: "Wedding | Gia Hiếu và Hà Phương",
+      description: "VIP decor - Tri.P (Editor)",
       category: "Wedding",
       thumbnail: "",
     },
