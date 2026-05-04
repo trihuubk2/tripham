@@ -339,7 +339,7 @@ Mục tiêu của tôi là biến những khoảnh khắc của bạn thành nh�
     },
     {
       id: "3",
-      title: "Báo cáo ASIC Congress 2026 ",
+      title: "Hội Nghị ASIC Congress 2026 ",
       description: "Vận hành LED báo cáo, ghi tư liệu cho sự kiện",
       date: "2026-01-18",
       images: [
